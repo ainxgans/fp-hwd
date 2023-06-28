@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tab4</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" *ngFor="let event of events">
+        <ion-card>
+          <img src="{{ event.strThumb }}" alt="" srcset="">
+          <ion-card-header>
+            <ion-card-title>{{ event.strEvent }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{ event.dateEvent }} - {{ event.strTime }} BST</p>
+            <p>{{ event.strVenue }}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button (click)="previousRound()">Previous</ion-button>
+  <ion-label>
+    Week {{ selectedRound }}
+  </ion-label>
+  <ion-button (click)="nextRound()">Next</ion-button>
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-content>
