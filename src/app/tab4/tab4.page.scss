@@ -13,3 +13,9 @@ ion-card-title {
   padding-right: 20px;
   justify-content: space-between;
 }
+ion-card-content p {
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+  align-items: center;
+}

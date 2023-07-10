@@ -16,8 +16,9 @@
             <ion-card-title>{{ event.strEvent }}</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <p>{{ event.dateEvent }} - {{ event.strTime }} BST</p>
-            <p>{{ event.strVenue }}</p>
+            <p><ion-icon name="today"></ion-icon>{{ event.dateEvent|date:'dd MMM yyyy' }}</p>
+            <p><ion-icon name="time"></ion-icon>{{ formatJam(event.strTime)}} WIB</p>
+            <p><ion-icon name="location"></ion-icon>{{ event.strVenue }}</p>
           </ion-card-content>
         </ion-card>
       </ion-col>

@@ -40,4 +40,11 @@ export class Tab4Page implements OnInit {
       console.log(data);
     });
   }
+  formatJam(jam: string) {
+    const [hour, minute, second] = jam.split(':');
+    const date = new Date();
+    date.setUTCHours(Number(hour) + 7, Number(minute), Number(second));
+    const formattedTime = date.toISOString().substr(11, 8);
+    return formattedTime;
+  }
 }

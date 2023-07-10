@@ -13,16 +13,22 @@
         <img [src]="item.strThumb" alt="Team Badge" />
         <ion-card-header>
           <ion-card-title> {{ item.strLeague }} - {{ item.strSeason }}</ion-card-title>
-          <ion-card-subtitle>{{ item.strEvent }}</ion-card-subtitle>
         </ion-card-header>
-
         <ion-card-content>
+          <div class="skor">
+            <p id="team">{{ item.strHomeTeam }} <span id="goal">{{ item.intHomeScore ? item.intHomeScore : '0' }}</span>
+            </p>
+            <p id="team">{{ item.strAwayTeam }} <span id="goal">{{ item.intAwayScore ? item.intAwayScore : '0'}}</span>
+            </p>
+          </div>
           <ion-label>
-            <ion-icon name="calendar-outline"></ion-icon> {{ item.dateEvent }}</ion-label>
+            <ion-icon name="calendar-outline"></ion-icon> {{ item.dateEvent }}
+          </ion-label>
           <ion-label>
-            <ion-icon name="location-outline"></ion-icon>
-            {{ item.strVenue }}</ion-label>
+            <ion-icon name="location-outline"></ion-icon> {{ item.strVenue}}
+          </ion-label>
         </ion-card-content>
+
       </ion-card>
     </ion-item>
   </ion-list>
